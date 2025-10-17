@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang='en'>
+<head>
+<meta charset='utf-8'/>
+<meta name='viewport' content='width=device-width, initial-scale=1'/>
+<title>Kishaan Deepak — Crop Yield Predictor</title>
+<link rel='stylesheet' href='/static/css/style.css'/>
+</head>
+<body>
+<main class='container'>
+<header class='hero'>
+<h1>Kishaan Deepak</h1>
+<p>AI-powered crop yield prediction & optimization.</p>
+</header>
+<section class='card form-card'>
+<form id='predict-form'>
+<div class='row'><label>Crop Type</label><select name='crop_type' id='crop_type' required></select></div>
+<div class='row'><label>Region</label><select name='region' id='region' required></select></div>
+<div class='row half'><div><label>Temperature (°C)</label><input name='temperature_c' type='number' step='0.1' required/></div>
+<div><label>Rainfall (mm)</label><input name='rainfall_mm' type='number' step='0.1' required/></div></div>
+<div class='row half'><div><label>Humidity (%)</label><input name='humidity_percent' id='humidity_percent' type='number' step='0.1' required/></div>
+</div>
+<div class='row'><label>Soil Type</label><select name='soil_type' id='soil_type' required></select></div>
+<div class='actions'><button type='submit'>Predict Yield</button></div>
+</form>
+<div id='result' class='result-card' hidden>
+<h3>Predicted Production</h3>
+<p id='prediction-text'>—</p>
+<button id='new'>Predict another</button>
+</div>
+</section>
+
+</main>
+<script src='/static/js/main.js'></script>
+</body>
+</html>
